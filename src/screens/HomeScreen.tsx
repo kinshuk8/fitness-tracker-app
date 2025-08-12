@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../../App'; // Import RootStackParamList
+import { RootStackParamList } from '../../App'; 
 
 interface UserDetails {
     name: string;
@@ -21,7 +21,6 @@ interface HomeScreenProps extends StackScreenProps<RootStackParamList, 'Home'> {
 const HomeScreen = ({ userDetails, onNavigateToFitnessTracker, onNavigateToCalorieTracker, onEditUserDetails, navigation }: HomeScreenProps) => {
     return (
         <View style={styles.container}>
-            {/* The back button to edit details is now handled by navigation.navigate('UserDetails') */}
             <Text style={styles.title}>Welcome, {userDetails.name}!</Text>
             <Text style={styles.userDetailsText}>
                 Weight: {userDetails.weight} {userDetails.weightUnit} | Height: {userDetails.height} {userDetails.heightUnit}
